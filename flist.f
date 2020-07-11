@@ -6,10 +6,10 @@
 
 rtl/minitb.sv
 rtl/minitb_top.sv
-data/if/data_if.sv
+data/data_if.sv
 data/seq_lib/data_seq_lib.sv
 data/agent/data_agent.sv
 seq_lib/minitb_seq_lib.sv
 env/minitb_env.sv
 test_lib/minitb_test_lib.sv
-tb_top/minitb_tb_top.sv
+minitb_tb_top.sv
