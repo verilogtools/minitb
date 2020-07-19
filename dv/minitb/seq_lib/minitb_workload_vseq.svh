@@ -1,6 +1,6 @@
 class minitb_workload_vseq extends uvm_sequence;
   `uvm_object_utils(minitb_workload_vseq)
-  `uvm_declare_p_sequencer(minitb_vseqr)
+  `uvm_declare_p_sequencer(minitb_vseqr::minitb_vseqr)
   data_seq_lib::data_workload_seq workload_seq;
 
   function new(string name = "");

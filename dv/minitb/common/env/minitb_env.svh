@@ -4,7 +4,7 @@ class minitb_env extends uvm_env;
   virtual data_if data_out_if;
 
   minitb_env_cfg cfg;
-  minitb_seq_lib::minitb_vseqr vseqr;
+  minitb_vseqr::minitb_vseqr vseqr;
   minitb_scoreboard scoreboard;
 
   data_agent::data_agent agent_in;
@@ -34,7 +34,7 @@ class minitb_env extends uvm_env;
     agent_out.vif = data_out_if;
 
     scoreboard = minitb_scoreboard::type_id::create("scoreboard", this);
-    vseqr = minitb_seq_lib::minitb_vseqr::type_id::create("vseqr", this);
+    vseqr = minitb_vseqr::minitb_vseqr::type_id::create("vseqr", this);
   endfunction : build_phase
 
   virtual function void connect_phase (uvm_phase phase);

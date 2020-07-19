@@ -12,7 +12,7 @@ class minitb_scoreboard extends uvm_scoreboard;
     out_port = new("out_port", this);
   endfunction
 
-  function write_in(data_seq_lib::data_sequence_item item);
+  function void write_in(data_seq_lib::data_sequence_item item);
     `uvm_info(get_name(), "New input transaction", UVM_LOW)
     if (requests.exists(item.data)) begin
       requests[item.data] += 1;
@@ -21,7 +21,7 @@ class minitb_scoreboard extends uvm_scoreboard;
     end
   endfunction
 
-  function write_out(data_seq_lib::data_sequence_item item);
+  function void write_out(data_seq_lib::data_sequence_item item);
     if (requests.exists(item.data)) begin
       requests[item.data] -= 1;
       if (requests[item.data] == 0) requests.delete(item.data);

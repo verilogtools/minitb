@@ -10,10 +10,11 @@ module minitb_tb_top;
  logic clk;
  initial begin
    clk = 0;
-   forever #1ns clk = ~clk;
+   forever #1 clk = ~clk;
  end
 
  // minitb
+ // NOTE: It is okay to not explicitly connect all signals here.
  minitb_top minitb (.clk);
 
  // UVM test

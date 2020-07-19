@@ -16,7 +16,7 @@ class data_agent_driver extends uvm_driver #(.REQ(data_seq_lib::data_sequence_it
     vif.active_cb.valid <= 0;
     vif.active_cb.data <= 0;
     forever begin
-      data_sequence_item item;
+      data_seq_lib::data_sequence_item item;
       seq_item_port.get_next_item(item);
       drive_item(item);
       seq_item_port.item_done();

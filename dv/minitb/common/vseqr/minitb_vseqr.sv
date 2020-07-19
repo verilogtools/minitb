@@ -1,9 +1,8 @@
 // ----------------------------------------------------------------------------
-// Minitb sequence lib package
+// Minitb Virtual Sequencer lib package
 // ----------------------------------------------------------------------------
-package minitb_seq_lib;
+package minitb_vseqr;
   import uvm_pkg::*;
   `include "minitb_vseqr.svh"
-  `include "minitb_workload_vseq.svh"
 endpackage
 
